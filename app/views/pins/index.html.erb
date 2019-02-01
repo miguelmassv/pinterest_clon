@@ -1,0 +1,11 @@
+<div id="pins" class="transitions-enabled centered clearfix masonry">
+  <%  @pins.each do |pin| %>
+    <div class="pin card">
+      <div class="card-body">
+        <img src="<%= pin.image_url %>" alt="<%= pin.title %>">
+        <h2><%= pin.title.capitalize %></h2>
+        <p class="user"> Published by <%= pin.user.email %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
